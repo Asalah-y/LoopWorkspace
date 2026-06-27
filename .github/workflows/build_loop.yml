@@ -232,7 +232,7 @@ jobs:
 
       # Build signed Loop IPA file
       - name: Fastlane Build & Archive
-        run: bundle exec fastlane build_loop
+        run: bundle exec fastlane build_loop && bundle exec fastlane build_caregiver
         env:
           TEAMID: ${{ secrets.TEAMID }}
           GH_PAT: ${{ secrets.GH_PAT }}
