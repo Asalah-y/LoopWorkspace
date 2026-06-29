@@ -8,12 +8,12 @@ env:
 jobs:
   build:
     name: Build Caregiver
-    runs-on: macos-15
+    runs-on: macos-14
     permissions:
       contents: write
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           token: ${{ secrets.GH_PAT }}
           submodules: recursive
